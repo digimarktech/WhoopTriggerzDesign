@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var sliderValue: CGFloat = 50
     var body: some View {
         ZStack {
             gradientBackgroundView
+            VStack {
+                Spacer()
+                HStack{
+                    customSlider(value: $sliderValue, speakerImage: "Volume" )
+                }
+            }
+            
+                   }
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+       
     }
 }
 
@@ -30,3 +40,4 @@ extension ContentView {
         .edgesIgnoringSafeArea(.all)
     }
 }
+
