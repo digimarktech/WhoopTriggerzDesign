@@ -11,6 +11,9 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             gradientBackgroundView
+            PastorButton(width: 300) {
+                print("Pastor button pressed")
+            }
         }
     }
 }
