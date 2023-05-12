@@ -30,10 +30,53 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                Spacer()
-                PastorButton(width: 300) {
-                    print("Pastor button pressed")
+                
+                ZStack {
+                    Circle()
+                        .frame(width: 50)
+                    HStack(spacing: 100) {
+                        
+                        Button {
+                            print("Praise Break Button Pressed")
+                        } label: {
+                            Text("Praise Break ")
+                                .foregroundColor(.white)
+                        }
+                        .offset(x: -30)
+                        Button {
+                            print("Worship Button Pressed")
+                        } label: {
+                            Text("Worship")
+                                .foregroundColor(.white)
+                        }
+                        
+                    }
                 }
+                
+                HStack(spacing: 34) {
+                    CustomIconButton(image: "Key", width: 22) {
+                        print("Left arrow tapped")
+                    }
+                    CustomStepperButton()
+                    CustomIconButton(image: "Key", width: 22) {
+                        print("Left arrow tapped")
+                    }
+                }
+                .padding(.bottom, 60)
+
+//                Spacer()
+                HStack(alignment: .bottom) {
+                    CustomIconButton(image: "Music_tune", width: 22) {
+                        print("Left arrow tapped")
+                    }
+                    PastorButton(width: 270) {
+                        print("Pastor button pressed")
+                    }
+                    CustomIconButton(image: "Reload", width: 22) {
+                        print("Left arrow tapped")
+                    }
+                }
+                
                 Spacer()
             }
             

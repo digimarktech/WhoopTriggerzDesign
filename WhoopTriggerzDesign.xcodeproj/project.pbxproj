@@ -13,6 +13,7 @@
 		BD248F8F2A05DDAE00A81CFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD248F8E2A05DDAE00A81CFC /* Preview Assets.xcassets */; };
 		BD248F9C2A0978C700A81CFC /* PastorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9B2A0978C700A81CFC /* PastorButton.swift */; };
 		BD248F9E2A0DC9D000A81CFC /* CustomIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */; };
+		BD248FA02A0DF6EE00A81CFC /* CustomStepperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		BD248F8E2A05DDAE00A81CFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD248F9B2A0978C700A81CFC /* PastorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastorButton.swift; sourceTree = "<group>"; };
 		BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconButton.swift; sourceTree = "<group>"; };
+		BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				BD248F8D2A05DDAE00A81CFC /* Preview Content */,
 				BD248F9B2A0978C700A81CFC /* PastorButton.swift */,
 				BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */,
+				BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */,
 			);
 			path = WhoopTriggerzDesign;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				BD248F9E2A0DC9D000A81CFC /* CustomIconButton.swift in Sources */,
 				BD248F9C2A0978C700A81CFC /* PastorButton.swift in Sources */,
 				BD248F882A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift in Sources */,
+				BD248FA02A0DF6EE00A81CFC /* CustomStepperButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
