@@ -9,11 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .center) {
             gradientBackgroundView
-            PastorButton(width: 300) {
-                print("Pastor button pressed")
+            VStack {
+                HStack {
+                    CustomIconButton(image: "Left_arrow", width: 22) {
+                        print("Left arrow tapped")
+                    }
+                    Spacer()
+                    Button {
+                        print("Church flow tapped")
+                    } label: {
+                        Text("Church Flow")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    Spacer()
+                    CustomIconButton(image: "Favorite", width: 22) {
+                        print("Favorite tapped")
+                    }
+                }
+                .padding(.horizontal, 20)
+                Spacer()
+                PastorButton(width: 300) {
+                    print("Pastor button pressed")
+                }
+                Spacer()
             }
+            
         }
     }
 }
