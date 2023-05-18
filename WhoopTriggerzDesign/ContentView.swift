@@ -55,7 +55,7 @@ struct ContentView: View {
                 
                 HStack(spacing: 34) {
                     CustomIconButton(image: "Key", width: 22) {
-                        print("Left arrow tapped")
+                        print("Key tapped")
                     }
                     CustomStepperButton()
                     CustomIconButton(image: "Key", width: 22) {

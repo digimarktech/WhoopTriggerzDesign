@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+extension Color {
+    static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
+    static let darkEnd = Color(red: 25 / 255, green: 25 / 255, blue: 30 / 255)
+}
+
 /// A custom button that displays an icon image in the center
 struct CustomIconButton: View {
     /// The image name to use
@@ -42,11 +47,52 @@ struct CustomIconButton_Previews: PreviewProvider {
     }
 }
 
+extension LinearGradient {
+    init(_ colors: Color...) {
+        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
+struct DarkBackground<S: Shape>: View {
+    var isHighlighted: Bool
+    var shape: S
+
+    var body: some View {
+        ZStack {
+            if isHighlighted {
+                shape
+                    .fill(Color.darkEnd)
+                    .shadow(color: Color.darkStart, radius: 10, x: 5, y: 5)
+                    .shadow(color: Color.darkEnd, radius: 10, x: -5, y: -5)
+
+            } else {
+                shape
+                    .fill(Color.darkEnd)
+                    .shadow(color: Color.darkStart, radius: 10, x: -10, y: -10)
+                    .shadow(color: Color.darkEnd, radius: 10, x: 10, y: 10)
+            }
+        }
+    }
+}
+
+struct DarkButtonStyle: ButtonStyle {
+    var padding: CGFloat
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding(padding * 0.75)
+            .contentShape(Circle())
+            .background(
+                DarkBackground(isHighlighted: configuration.isPressed, shape: Circle())
+            )
+    }
+}
+
 struct NeumorphicButtonStyle: ButtonStyle {
     var padding: CGFloat
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(padding * 0.75)
+            .contentShape(Circle())
             .background(
                 Group {
                     if configuration.isPressed {
@@ -55,6 +101,16 @@ struct NeumorphicButtonStyle: ButtonStyle {
                                 Color(red: 0.19, green: 0.2, blue: 0.23),
                                 Color(red: 0.17, green: 0.19, blue: 0.21)
                             ], startPoint: .leading, endPoint: .trailing))
+                            .overlay(
+                                Circle()
+                                    .stroke(Color.black, lineWidth: 4)
+                                    .blur(radius: 4)
+                                    .offset(x: 2, y: 2)
+                                    .mask(
+                                        Circle()
+                                            .fill(LinearGradient(Color.black, Color.clear))
+                                    )
+                            )
                     } else {
                         Circle()
                             .fill(LinearGradient(colors: [
