@@ -14,6 +14,7 @@
 		BD248F9C2A0978C700A81CFC /* PastorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9B2A0978C700A81CFC /* PastorButton.swift */; };
 		BD248F9E2A0DC9D000A81CFC /* CustomIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */; };
 		BD248FA02A0DF6EE00A81CFC /* CustomStepperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */; };
+		BD248FA22A15B20E00A81CFC /* CustomTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248FA12A15B20E00A81CFC /* CustomTextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BD248F9B2A0978C700A81CFC /* PastorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastorButton.swift; sourceTree = "<group>"; };
 		BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconButton.swift; sourceTree = "<group>"; };
 		BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperButton.swift; sourceTree = "<group>"; };
+		BD248FA12A15B20E00A81CFC /* CustomTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				BD248F9B2A0978C700A81CFC /* PastorButton.swift */,
 				BD248F9D2A0DC9D000A81CFC /* CustomIconButton.swift */,
 				BD248F9F2A0DF6EE00A81CFC /* CustomStepperButton.swift */,
+				BD248FA12A15B20E00A81CFC /* CustomTextButton.swift */,
 			);
 			path = WhoopTriggerzDesign;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD248F8A2A05DDAD00A81CFC /* ContentView.swift in Sources */,
+				BD248FA22A15B20E00A81CFC /* CustomTextButton.swift in Sources */,
 				BD248F9E2A0DC9D000A81CFC /* CustomIconButton.swift in Sources */,
 				BD248F9C2A0978C700A81CFC /* PastorButton.swift in Sources */,
 				BD248F882A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift in Sources */,
