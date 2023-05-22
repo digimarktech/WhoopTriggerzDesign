@@ -131,14 +131,14 @@ struct GradientBackground<S: Shape>: View {
                 shape
                     .fill(LinearGradient.blueGradient)
 //                    .overlay(shape.stroke(LinearGradient(Color.lightStart, Color.lightEnd), lineWidth: 4))
-                    .shadow(color: Color.darkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: Color.darkEnd, radius: 10, x: -5, y: -5)
+                    .shadow(color: Color(red: 0.12, green: 0.14, blue: 0.15), radius: 6, x: 5, y: 5)
+                    .shadow(color: Color(red: 0.28, green: 0.31, blue: 0.34), radius: 6, x: -5, y: -5)
 
             } else {
                 shape
                     .fill(LinearGradient.darkThemeButtonGradient)
-                    .shadow(color: Color.darkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: Color.darkEnd, radius: 10, x: 10, y: 10)
+                    .shadow(color: Color(red: 0.12, green: 0.14, blue: 0.15), radius: 6, x: 5, y: 5)
+                    .shadow(color: Color(red: 0.28, green: 0.31, blue: 0.34), radius: 6, x: -5, y: -5)
             }
         }
     }
