@@ -1,42 +1,40 @@
 //
-//  CustomSliderModifier.swift
+//  CustomSliderView.swift
 //  WhoopTriggerzDesign
 //
-//  Created by Jessica Perez on 5/10/23.
+//  Created by Dan Aupont on 5/22/23.
 //
+
 import SwiftUI
 
-struct CustomSliderModifier: ViewModifier {
-    //MARK: - Properties
+struct CustomSliderView: View {
+    // MARK: - Properties
     @Binding var value : CGFloat
-    @State var isMuted: Bool = false
-    @State var speakerImage: String
-//MARK: -Body
-    func body(content: Content) -> some View {
+    @Binding var isMuted: Bool
+    
+    var body: some View {
         HStack {
             // Speaker Button
             Button(action: {
                 // Speaker toggle button
                 isMuted.toggle()
-                speakerImage = isMuted ? "Mute" : "Volume"
-                //Check mute button 
+                //Check mute button
                 print(isMuted ? "Muted" : "Unmuted")
                  
             }) {
-                Image(speakerImage)
+                Image(isMuted ? "Mute" : "Volume")
                     .resizable()
                     .frame(width: 30, height: 30)
-                    .padding()
             }
             
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
                 Capsule()
-                    .fill(Color.gray.opacity(0.2))
+                    .fill(Color.sliderColor)
                     .frame(height: 6)
                 
                 ZStack(alignment: Alignment(horizontal: .trailing, vertical: .center)) {
                     Capsule()
-                        .fill(Color.sliderColor.opacity(0.9))
+                        .fill(LinearGradient(colors: [Color("blueGradientStartColor"), Color("blueGradientEndColor")], startPoint: .leading, endPoint: .trailing))
                         .frame(width: value,height: 6)
                     
                     Circle()
@@ -45,14 +43,13 @@ struct CustomSliderModifier: ViewModifier {
                         .padding(.all, 10)
                     Image("Volume_Slider_Knob")
                         .clipShape(Circle())
-                        .shadow(color: Color.gray.opacity(0.6),radius: 10,x: 4,y: 2)
                 }
             }//:ZSTACK
            
             .gesture(DragGesture().onChanged({ (dragValue) in
                 //divide and subtract lower bound upper bound of the range to get a value between 0.0 and 1.0
-                if dragValue.location.x <= UIScreen.main.bounds.width - 30 && dragValue.location.x >= 0{
-                    let rangeValue = Double((dragValue.location.x - 0) / (UIScreen.main.bounds.width - 30))
+                if dragValue.location.x <= UIScreen.main.bounds.width - 55 && dragValue.location.x >= 0{
+                    let rangeValue = Double((dragValue.location.x - 0) / (UIScreen.main.bounds.width - 55))
                     //if it falls within the bounds print value
                     print("Slider range value: \(rangeValue)")
                     self.value = dragValue.location.x
@@ -64,9 +61,8 @@ struct CustomSliderModifier: ViewModifier {
     }
 }
 
-//extension Custom modifier
-extension View {
-    func customSlider(value: Binding<CGFloat>, speakerImage: String) -> some View {
-        self.modifier(CustomSliderModifier(value: value, speakerImage: speakerImage))
+struct CustomSliderView_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomSliderView(value: .constant(50.0), isMuted: .constant(false))
     }
 }

@@ -9,19 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State var sliderValue: CGFloat = 50
+    @State private var isMuted: Bool = false
     var body: some View {
         ZStack {
             gradientBackgroundView
             VStack {
                 Spacer()
-                HStack{
-                    customSlider(value: $sliderValue, speakerImage: "Volume" )
-                }
-            }
-            
+                CustomSliderView(value: $sliderValue, isMuted: $isMuted)
             }
         }
     }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

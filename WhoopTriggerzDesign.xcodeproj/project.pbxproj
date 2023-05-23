@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E1A444F2A0C4D3F00A1CF7B /* CustomSliderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A444E2A0C4D3F00A1CF7B /* CustomSliderModifier.swift */; };
 		8E1A44512A0C52B500A1CF7B /* Colors+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1A44502A0C52B500A1CF7B /* Colors+Ext.swift */; };
+		90B765C12A1C0F180014201B /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B765C02A1C0F180014201B /* CustomSliderView.swift */; };
 		BD248F882A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F872A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift */; };
 		BD248F8A2A05DDAD00A81CFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F892A05DDAD00A81CFC /* ContentView.swift */; };
 		BD248F8C2A05DDAE00A81CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD248F8B2A05DDAE00A81CFC /* Assets.xcassets */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E1A444E2A0C4D3F00A1CF7B /* CustomSliderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderModifier.swift; sourceTree = "<group>"; };
 		8E1A44502A0C52B500A1CF7B /* Colors+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Ext.swift"; sourceTree = "<group>"; };
 		8E1A44522A0C6D3A00A1CF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		90B765C02A1C0F180014201B /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		BD248F842A05DDAD00A81CFC /* WhoopTriggerzDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopTriggerzDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD248F872A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopTriggerzDesignApp.swift; sourceTree = "<group>"; };
 		BD248F892A05DDAD00A81CFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8E367C102A0B2C3800097AB3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				8E1A444E2A0C4D3F00A1CF7B /* CustomSliderModifier.swift */,
+				90B765C02A1C0F180014201B /* CustomSliderView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -161,10 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1A444F2A0C4D3F00A1CF7B /* CustomSliderModifier.swift in Sources */,
 				8E1A44512A0C52B500A1CF7B /* Colors+Ext.swift in Sources */,
 				BD248F8A2A05DDAD00A81CFC /* ContentView.swift in Sources */,
 				BD248F882A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift in Sources */,
+				90B765C12A1C0F180014201B /* CustomSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

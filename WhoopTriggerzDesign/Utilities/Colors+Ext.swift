@@ -8,6 +8,6 @@
 import SwiftUI
 
 extension Color {
-    static let sliderColor = Color("blackColor")
+    static let sliderColor = Color("sliderBlackColor")
 }
 
