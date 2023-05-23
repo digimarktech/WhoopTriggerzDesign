@@ -17,13 +17,13 @@ struct CustomTextButton: View {
                     Text("Normal")
                         .font(.body2())
                 }
-                .toggleStyle(GradientToggleStyle())
+                .toggleStyle(GradientToggleStyle(shape: Capsule()))
                 
                 Toggle(isOn: $specialToggled) {
                     Text("Special")
                         .font(.body2())
                 }
-                .toggleStyle(GradientToggleStyle())
+                .toggleStyle(GradientToggleStyle(shape: Capsule()))
             }
             .padding()
 //                .frame(maxWidth: .infinity)
@@ -53,7 +53,8 @@ struct GradientButtonStyle: ButtonStyle {
     }
 }
 
-struct GradientToggleStyle: ToggleStyle {
+struct GradientToggleStyle<S: Shape>: ToggleStyle {
+    var shape: S
     func makeBody(configuration: Configuration) -> some View {
         Button {
             configuration.isOn.toggle()
@@ -62,10 +63,33 @@ struct GradientToggleStyle: ToggleStyle {
                 .padding(.vertical, 16)
                 .padding(.horizontal, 48)
                 .foregroundColor(Color.white.opacity(configuration.isOn ? 1 : 0.4))
-                .clipShape(Capsule())
+                .clipShape(shape)
         }
         .background(
-            GradientBackground(isHighlighted: configuration.isOn, shape: Capsule())
+            GradientBackground(isHighlighted: configuration.isOn, shape: shape)
+        )
+
+    }
+}
+
+struct GradientRingToggleStyle<S: Shape>: ToggleStyle {
+    var shape: S
+    func makeBody(configuration: Configuration) -> some View {
+        Button {
+            configuration.isOn.toggle()
+        } label: {
+            configuration.label
+                .padding(.vertical, 16)
+                .padding(.horizontal, 20)
+                .foregroundColor(Color.white.opacity(configuration.isOn ? 1 : 0.4))
+                .clipShape(shape)
+                .overlay(
+                    shape
+                        .stroke(Color.black)
+                )
+        }
+        .background(
+            GradientBackground(isHighlighted: configuration.isOn, shape: shape)
         )
 
     }

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var sliderValue: CGFloat = 50
+    @State var shoutStartIsOn: Bool = false
+    @State var talkMusicIsOn: Bool = false
+    @State var fadeIsOn: Bool = false
     @State private var isMuted: Bool = false
     var body: some View {
         ZStack(alignment: .center) {
@@ -88,6 +91,27 @@ struct ContentView: View {
                 .padding(.bottom, 24)
                 
                 CustomTextButton()
+                    .padding(.bottom, 16)
+                
+                HStack {
+                    Toggle(isOn: $shoutStartIsOn) {
+                        Text("Shout Start")
+                            .font(.body2())
+                    }
+                    .toggleStyle(GradientRingToggleStyle(shape: Capsule()))
+                    
+                    Toggle(isOn: $fadeIsOn) {
+                        Text("Fade")
+                            .font(.body2())
+                    }
+                    .toggleStyle(GradientRingToggleStyle(shape: Circle()))
+                    
+                    Toggle(isOn: $talkMusicIsOn) {
+                        Text("Talk Music")
+                            .font(.body2())
+                    }
+                    .toggleStyle(GradientRingToggleStyle(shape: Capsule()))
+                }
                 
                 Spacer()
                 CustomSliderView(value: $sliderValue, isMuted: $isMuted)
