@@ -25,7 +25,7 @@ struct ContentView: View {
                     } label: {
                         Text("Church Flow")
                             .foregroundColor(.white)
-                            .fontWeight(.bold)
+                            .font(.custom("Lato-Black", size: 16))
                     }
                     Spacer()
                     CustomIconButton(image: "Favorite", width: 22) {
@@ -44,6 +44,7 @@ struct ContentView: View {
                         } label: {
                             Text("Praise Break ")
                                 .foregroundColor(.white)
+                                .font(.custom("Lato-Regular", size: 16))
                         }
                         .offset(x: -30)
                         Button {
@@ -51,6 +52,7 @@ struct ContentView: View {
                         } label: {
                             Text("Worship")
                                 .foregroundColor(.white)
+                                .font(.custom("Lato-Regular", size: 16))
                         }
                         
                     }
