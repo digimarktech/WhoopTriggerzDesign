@@ -12,7 +12,9 @@ struct ContentView: View {
     @State private var isMuted: Bool = false
     var body: some View {
         ZStack(alignment: .center) {
-            gradientBackgroundView
+//            gradientBackgroundView
+            Color(red: 0.21, green: 0.23, blue: 0.25)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 HStack {
@@ -74,13 +76,18 @@ struct ContentView: View {
                     CustomIconButton(image: "Music_tune", width: 22) {
                         print("Left arrow tapped")
                     }
+                    .offset(x: 16)
                     PastorButton(width: 270) {
                         print("Pastor button pressed")
                     }
                     CustomIconButton(image: "Reload", width: 22) {
                         print("Left arrow tapped")
                     }
+                    .offset(x: -16)
                 }
+                .padding(.bottom, 24)
+                
+                CustomTextButton()
                 
                 Spacer()
                 CustomSliderView(value: $sliderValue, isMuted: $isMuted)
@@ -104,7 +111,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPad (10th generation)"))
     }
 }
 
