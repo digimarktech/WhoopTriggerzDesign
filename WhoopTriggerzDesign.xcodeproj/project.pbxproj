@@ -18,6 +18,7 @@
 		909263D42A1C5F5900223142 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 909263C82A1C5F4200223142 /* Lato-Thin.ttf */; };
 		909263D52A1C5F5900223142 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 909263CA2A1C5F4200223142 /* Lato-Italic.ttf */; };
 		909263D62A1C5F5900223142 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 909263CB2A1C5F4200223142 /* Lato-LightItalic.ttf */; };
+		909263D82A1C649C00223142 /* LatoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909263D72A1C649C00223142 /* LatoFont.swift */; };
 		90B765C12A1C0F180014201B /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B765C02A1C0F180014201B /* CustomSliderView.swift */; };
 		BD248F882A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F872A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift */; };
 		BD248F8A2A05DDAD00A81CFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD248F892A05DDAD00A81CFC /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 		909263CA2A1C5F4200223142 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		909263CB2A1C5F4200223142 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		909263CC2A1C5F4200223142 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		909263D72A1C649C00223142 /* LatoFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoFont.swift; sourceTree = "<group>"; };
 		90B765C02A1C0F180014201B /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		BD248F842A05DDAD00A81CFC /* WhoopTriggerzDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopTriggerzDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD248F872A05DDAD00A81CFC /* WhoopTriggerzDesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoopTriggerzDesignApp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				909263C22A1C5F2C00223142 /* Lato */,
+				909263D72A1C649C00223142 /* LatoFont.swift */,
 			);
 			path = CustomFonts;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909263D82A1C649C00223142 /* LatoFont.swift in Sources */,
 				8E1A44512A0C52B500A1CF7B /* Colors+Ext.swift in Sources */,
 				BD248F8A2A05DDAD00A81CFC /* ContentView.swift in Sources */,
 				BD248FA22A15B20E00A81CFC /* CustomTextButton.swift in Sources */,
